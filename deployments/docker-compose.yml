@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  db:
+    image: 'amazon/dynamodb-local'
+
+  api:
+    build: ../Dockerfile
+    volume:
+      - ..:/app
