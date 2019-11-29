@@ -5,6 +5,8 @@ services:
     image: 'amazon/dynamodb-local'
 
   api:
-    build: ../Dockerfile
-    volume:
+    build:
+      context: ..
+
+    volumes:
       - ..:/app
